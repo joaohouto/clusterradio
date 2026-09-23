@@ -7,6 +7,47 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.ACCESS_BROADCAST_RADIO" tools:ignore="ProtectedPermissions" />
+
+    <queries>
+        <package android:name="com.syu.radio" />
+        <package android:name="com.syu.ms" />
+        <package android:name="com.syu.canbus" />
+        <package android:name="com.ts.MainUI" />
+        <package android:name="com.ts.radiostation" />
+        <package android:name="com.microntek.radio" />
+        <package android:name="com.microntek.sync" />
+        <package android:name="com.hcn.autoradio" />
+        <package android:name="com.jancar.radio" />
+        <package android:name="com.jancar.services" />
+        <package android:name="com.xy.radio" />
+        <package android:name="com.xyauto.radio" />
+        <package android:name="com.xyauto.ui" />
+        <package android:name="com.nwd.radio" />
+        <package android:name="com.nwd.radio.service" />
+        <package android:name="com.mediatek.fmradio" />
+        <package android:name="com.android.fmradio" />
+        <package android:name="com.car.radio" />
+        <package android:name="com.tw.radio" />
+        <package android:name="tw.radio" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="radio" />
+        </intent>
+        <intent>
+            <action android:name="com.syu.radio" />
+        </intent>
+        <intent>
+            <action android:name="com.microntek.sync" />
+        </intent>
+        <intent>
+            <action android:name="com.ts.radiostation" />
+        </intent>
+        <intent>
+            <action android:name="com.hcn.autoradio.FM_PLUG_SERVICE" />
+        </intent>
+    </queries>
 
     <application
         android:name=".ClusterRadioApplication"

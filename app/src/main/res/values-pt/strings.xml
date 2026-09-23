@@ -38,6 +38,11 @@
     <string name="settings_about_title">SOBRE</string>
     <string name="settings_about_app">Cluster Radio</string>
     <string name="settings_about_desc">Rádio AM/FM de alta performance projetado para centrais multimídia automotivas Android.</string>
+    <string name="settings_hardware_category">SINTONIZADOR &amp; HARDWARE</string>
+    <string name="settings_hardware_active_title">Sintonizador Veicular Ativo (MCU)</string>
+    <string name="settings_hardware_active_desc">O Cluster Radio está controlando diretamente o chip receptor FM/AM da central multimídia com áudio nos alto-falantes.</string>
+    <string name="settings_hardware_inactive_title">Sem Hardware FM Veicular</string>
+    <string name="settings_hardware_inactive_desc">Nenhum módulo de rádio automotivo detectado neste aparelho (ex.: tablet ou celular sem chip de rádio físico e antena).</string>
     <string name="btn_close">Fechar</string>
 
     <!-- Accent Themes -->

@@ -96,6 +96,7 @@ fun RadioScreen(
                 stationName = state.stationName,
                 radioText = state.radioText,
                 isScanning = state.isScanning,
+                isHardwareActive = state.isHardwareActive,
                 onSelectBand = { band -> viewModel.setBand(band) }
             )
 
@@ -132,6 +133,7 @@ fun RadioScreen(
             currentAccentTheme = currentAccent,
             currentVolumeGainPercent = settings.masterVolumePercent,
             isKeepScreenOn = settings.keepScreenOn,
+            isHardwareActive = state.isHardwareActive,
             onSelectAccent = { themeId -> viewModel.saveAccentTheme(themeId) },
             onSelectVolumeGain = { gain -> viewModel.saveMasterVolume(gain) },
             onToggleKeepScreenOn = { enabled -> viewModel.saveKeepScreenOn(enabled) },

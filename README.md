@@ -2,7 +2,7 @@
 
 > **Rádio AM/FM de alta performance com estética de cockpit esportivo, projetado sob medida para centrais multimídia automotivas Android.**
 
-Parte do ecossistema **Cluster** (ao lado de [Cluster Launcher](https://github.com/joaohouto/clusterlauncher) e [Cluster Player](https://github.com/joaohouto/clusterplayer)).
+Parte do ecossistema **Cluster** (ao lado de [Cluster Launcher](https://joaohouto.github.io/clusterlauncher) e [Cluster Player](https://github.com/joaohouto/clusterplayer)). Acesse o portal oficial em [joaohouto.github.io/clusterlauncher](https://joaohouto.github.io/clusterlauncher).
 
 ---
 
@@ -21,7 +21,7 @@ Parte do ecossistema **Cluster** (ao lado de [Cluster Launcher](https://github.c
 
 ## 📦 Download do APK
 
-Baixe a versão otimizada mais recente na aba de [Releases](https://github.com/joaohouto/clusterradio/releases/latest).
+Baixe a versão otimizada mais recente na aba de [Releases](https://github.com/joaohouto/clusterradio/releases/latest) ou conheça a suíte completa no portal oficial em [joaohouto.github.io/clusterlauncher](https://joaohouto.github.io/clusterlauncher).
 
 ---
 

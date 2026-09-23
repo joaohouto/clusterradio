@@ -61,6 +61,7 @@ fun RadioSettingsDialog(
     currentAccentTheme: ClusterAccent,
     currentVolumeGainPercent: Int,
     isKeepScreenOn: Boolean,
+    isHardwareActive: Boolean = false,
     onSelectAccent: (String) -> Unit,
     onSelectVolumeGain: (Int) -> Unit,
     onToggleKeepScreenOn: (Boolean) -> Unit,
@@ -261,6 +262,62 @@ fun RadioSettingsDialog(
                             inactiveTrackColor = Color(0xFF262930)
                         )
                     )
+                }
+
+                // Category: Hardware Tuner Status
+                Text(
+                    text = stringResource(R.string.settings_hardware_category),
+                    color = accent.primary,
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Bold,
+                    letterSpacing = 1.2.sp
+                )
+
+                // Hardware Tuner Status Card
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(SurfaceCard, RoundedCornerShape(12.dp))
+                        .border(
+                            1.dp,
+                            if (isHardwareActive) accent.primary.copy(alpha = 0.5f) else SurfaceCardBorder,
+                            RoundedCornerShape(12.dp)
+                        )
+                        .padding(16.dp)
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(14.dp)
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .size(12.dp)
+                                .clip(CircleShape)
+                                .background(if (isHardwareActive) Color(0xFF00E676) else Color(0xFF757575))
+                        )
+
+                        Column {
+                            Text(
+                                text = stringResource(
+                                    if (isHardwareActive) R.string.settings_hardware_active_title
+                                    else R.string.settings_hardware_inactive_title
+                                ),
+                                color = TextPrimary,
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Spacer(modifier = Modifier.height(3.dp))
+                            Text(
+                                text = stringResource(
+                                    if (isHardwareActive) R.string.settings_hardware_active_desc
+                                    else R.string.settings_hardware_inactive_desc
+                                ),
+                                color = TextSecondary,
+                                fontSize = 12.sp,
+                                lineHeight = 16.sp
+                            )
+                        }
+                    }
                 }
 
                 // About Card

@@ -38,6 +38,11 @@
     <string name="settings_about_title">ABOUT</string>
     <string name="settings_about_app">Cluster Radio</string>
     <string name="settings_about_desc">High-performance AM/FM radio engineered for Android automotive head units.</string>
+    <string name="settings_hardware_category">TUNER HARDWARE</string>
+    <string name="settings_hardware_active_title">Automotive Tuner Active (MCU)</string>
+    <string name="settings_hardware_active_desc">Cluster Radio is directly controlling the head unit\'s physical FM/AM chip with analog speaker output.</string>
+    <string name="settings_hardware_inactive_title">No Automotive FM Hardware</string>
+    <string name="settings_hardware_inactive_desc">No automotive MCU radio module detected on this device (e.g. tablet or phone without physical FM chip/antenna).</string>
     <string name="btn_close">Close</string>
 
     <!-- Accent Themes -->

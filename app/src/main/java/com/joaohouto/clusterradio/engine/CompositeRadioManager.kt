@@ -74,10 +74,13 @@ class CompositeRadioManager private constructor(private val context: Context) {
         scope.launch {
             hardwareEngine.state.collect { hwState ->
                 if (hwState.isHardwareTunerActive) {
-                    _playbackState.update {
-                        it.copy(
+                    _playbackState.update { current ->
+                        current.copy(
                             isHardwareActive = true,
-                            isScanning = hwState.isScanning
+                            isScanning = hwState.isScanning,
+                            currentFrequencyKhz = if (hwState.currentFrequencyKhz > 0) hwState.currentFrequencyKhz else current.currentFrequencyKhz,
+                            stationName = hwState.rdsStationName ?: current.stationName,
+                            radioText = hwState.radioText ?: current.radioText
                         )
                     }
                 }
@@ -109,7 +112,9 @@ class CompositeRadioManager private constructor(private val context: Context) {
             )
         }
         hardwareEngine.tune(band, frequencyKhz)
-        streamEngine.tune(band, frequencyKhz)
+        if (!_playbackState.value.isHardwareActive) {
+            streamEngine.tune(band, frequencyKhz)
+        }
     }
 
     fun step(stepUp: Boolean) {
@@ -123,7 +128,9 @@ class CompositeRadioManager private constructor(private val context: Context) {
         requestAudioFocus()
         _playbackState.update { it.copy(isPlaying = true, isMuted = false) }
         hardwareEngine.play()
-        streamEngine.play()
+        if (!_playbackState.value.isHardwareActive) {
+            streamEngine.play()
+        }
         RadioPlaybackService.start(context)
     }
 
@@ -144,18 +151,10 @@ class CompositeRadioManager private constructor(private val context: Context) {
 
     fun startScan(scanUp: Boolean, onFound: (Int) -> Unit = {}) {
         _playbackState.update { it.copy(isScanning = true) }
-        if (_playbackState.value.isHardwareActive) {
-            hardwareEngine.startScan(scanUp) { foundFreq ->
-                _playbackState.update { it.copy(isScanning = false) }
-                tune(_playbackState.value.currentBand, foundFreq)
-                onFound(foundFreq)
-            }
-        } else {
-            streamEngine.startScan(scanUp) { foundFreq ->
-                _playbackState.update { it.copy(isScanning = false) }
-                tune(_playbackState.value.currentBand, foundFreq)
-                onFound(foundFreq)
-            }
+        hardwareEngine.startScan(scanUp) { foundFreq ->
+            _playbackState.update { it.copy(isScanning = false) }
+            tune(_playbackState.value.currentBand, foundFreq)
+            onFound(foundFreq)
         }
     }
 

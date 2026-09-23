@@ -49,6 +49,7 @@ fun FrequencyDisplay(
     stationName: String?,
     radioText: String?,
     isScanning: Boolean,
+    isHardwareActive: Boolean = true,
     onSelectBand: (RadioBand) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -109,7 +110,11 @@ fun FrequencyDisplay(
                 if (isScanning) {
                     ScanningAnimation()
                 } else {
-                    val statusText = if (!stationName.isNullOrBlank()) stationName else "${band.displayName} STEREO"
+                    val statusText = when {
+                        !stationName.isNullOrBlank() -> stationName
+                        isHardwareActive -> "${band.displayName} STEREO"
+                        else -> "${band.displayName} • SEM SINTONIZADOR"
+                    }
                     Text(
                         text = statusText,
                         color = if (!stationName.isNullOrBlank()) accent.primary else TextSecondary,
