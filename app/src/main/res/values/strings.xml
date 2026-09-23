@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Cluster Radio</string>
+    <string name="notification_channel_name">Cluster Radio</string>
+    <string name="notification_channel_desc">Cluster Radio playback controls</string>
+
+    <string name="header_cluster_radio">CLUSTER RADIO</string>
+    <string name="band_fm">FM</string>
+    <string name="band_am">AM</string>
+    <string name="indicator_stereo">STEREO</string>
+    <string name="indicator_mono">MONO</string>
+    <string name="unit_mhz">MHz</string>
+    <string name="unit_khz">kHz</string>
+
+    <string name="preset_empty">---</string>
+    <string name="preset_format">P%1$d</string>
+    <string name="preset_saved_toast">Station %1$s saved to P%2$d</string>
+
+    <string name="desc_previous_station">Previous Station / Step Down</string>
+    <string name="desc_next_station">Next Station / Step Up</string>
+    <string name="desc_play">Play Radio</string>
+    <string name="desc_pause">Pause / Mute Radio</string>
+    <string name="desc_volume_down">Decrease Volume</string>
+    <string name="desc_volume_up">Increase Volume</string>
+    <string name="desc_settings">Radio Settings</string>
+    <string name="desc_frequency_slider">Frequency Tuning Ruler</string>
+    <string name="volume_label">VOL %1$d%%</string>
+
+    <!-- Settings & Customization -->
+    <string name="settings_title">SETTINGS</string>
+    <string name="settings_audio_category">AUDIO &amp; TUNER</string>
+    <string name="settings_display_category">DISPLAY &amp; INTERFACE</string>
+    <string name="settings_accent_title">Cluster Lighting Color</string>
+    <string name="settings_accent_subtitle">Select the gauge and button accent color</string>
+    <string name="settings_volume_title">Master App Volume</string>
+    <string name="settings_volume_subtitle">Calibrates DAC gain to prevent audio clipping</string>
+    <string name="settings_screen_on_title">Keep Screen On</string>
+    <string name="settings_screen_on_subtitle">Keep display active while radio is open</string>
+    <string name="settings_about_title">ABOUT</string>
+    <string name="settings_about_app">Cluster Radio</string>
+    <string name="settings_about_desc">High-performance AM/FM radio engineered for Android automotive head units.</string>
+    <string name="btn_close">Close</string>
+
+    <!-- Accent Themes -->
+    <string name="theme_needle_red">Needle Red</string>
+    <string name="theme_m_sport_blue">M-Sport Blue</string>
+    <string name="theme_racing_yellow">Racing Yellow</string>
+    <string name="theme_green_hell">Green Hell</string>
+    <string name="theme_sunset_orange">Sunset Orange</string>
+    <string name="theme_electric_cyan">Electric Cyan</string>
+    <string name="theme_pure_silver">Pure Silver</string>
+</resources>

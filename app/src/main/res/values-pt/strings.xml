@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Cluster Radio</string>
+    <string name="notification_channel_name">Cluster Radio</string>
+    <string name="notification_channel_desc">Controles de reprodução do Cluster Radio</string>
+
+    <string name="header_cluster_radio">CLUSTER RADIO</string>
+    <string name="band_fm">FM</string>
+    <string name="band_am">AM</string>
+    <string name="indicator_stereo">STEREO</string>
+    <string name="indicator_mono">MONO</string>
+    <string name="unit_mhz">MHz</string>
+    <string name="unit_khz">kHz</string>
+
+    <string name="preset_empty">---</string>
+    <string name="preset_format">P%1$d</string>
+    <string name="preset_saved_toast">Estação %1$s salva em P%2$d</string>
+
+    <string name="desc_previous_station">Estação Anterior / Passo Abaixo</string>
+    <string name="desc_next_station">Próxima Estação / Passo Acima</string>
+    <string name="desc_play">Tocar Rádio</string>
+    <string name="desc_pause">Pausar / Mutar Rádio</string>
+    <string name="desc_volume_down">Diminuir Volume</string>
+    <string name="desc_volume_up">Aumentar Volume</string>
+    <string name="desc_settings">Configurações do Rádio</string>
+    <string name="desc_frequency_slider">Régua de Sintonia de Frequência</string>
+    <string name="volume_label">VOL %1$d%%</string>
+
+    <!-- Settings & Customization -->
+    <string name="settings_title">CONFIGURAÇÕES</string>
+    <string name="settings_audio_category">ÁUDIO &amp; SINTONIA</string>
+    <string name="settings_display_category">TELA &amp; INTERFACE</string>
+    <string name="settings_accent_title">Cor de Iluminação do Cockpit</string>
+    <string name="settings_accent_subtitle">Selecione a cor de destaque dos instrumentos e botões</string>
+    <string name="settings_volume_title">Volume Mestre do Aplicativo</string>
+    <string name="settings_volume_subtitle">Calibra o ganho do DAC para evitar saturação de áudio</string>
+    <string name="settings_screen_on_title">Manter Tela Ligada</string>
+    <string name="settings_screen_on_subtitle">Mantém a tela ativa enquanto o rádio estiver aberto</string>
+    <string name="settings_about_title">SOBRE</string>
+    <string name="settings_about_app">Cluster Radio</string>
+    <string name="settings_about_desc">Rádio AM/FM de alta performance projetado para centrais multimídia automotivas Android.</string>
+    <string name="btn_close">Fechar</string>
+
+    <!-- Accent Themes -->
+    <string name="theme_needle_red">Needle Red</string>
+    <string name="theme_m_sport_blue">M-Sport Blue</string>
+    <string name="theme_racing_yellow">Racing Yellow</string>
+    <string name="theme_green_hell">Green Hell</string>
+    <string name="theme_sunset_orange">Sunset Orange</string>
+    <string name="theme_electric_cyan">Electric Cyan</string>
+    <string name="theme_pure_silver">Pure Silver</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="deep_metallic_background">#FF0B0C0E</color>
+    <color name="deep_metallic_background_secondary">#FF121316</color>
+    <color name="surface_card">#FF181A1E</color>
+    <color name="surface_card_border">#FF262930</color>
+    <color name="metallic_intermediate">#FF2E323A</color>
+    <color name="needle_red">#FFE61924</color>
+</resources>
